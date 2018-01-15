@@ -1,4 +1,14 @@
 language: node_js
 node_js:
-  - "9"
-before_script
+  - '9'
+before_script:
+  - npm run lint
+  - npm run build
+deploy:
+  provider: npm
+  email: contact@therealtbs.com
+  api_key:
+    secure: JKFR/XFU92U4zCQ3Myrm7KUGfsFoHaB5j0IJa3lBUUVnE7/f2acpArMC6dxUKrxxJ8CC0Hr+Baca0lBZ1osbI+72/Meztaa1FSKMopVaovZ2SDlVpu9sYvCjY4gXJN/QAS/ipGrRFcDJ1ZC+m3MUMJZop/8ie6ueho0VQ7AIB8caGWoqkOqZadadTuskjWUQVsLfmhOxaCFf85YWJU4SAeA8TiGK+TrKyKlyeoSZXMMyihwBVmRuARiHauMrSzXl+VbhPXjV5/lrJV5abjS8M3uok/+/LLidf45mR6ysLUNbceDvMB1ZcLEWg/57+bl3qAJzaq17wFHErB82tB9dMARqoJHdONmN9uNzQSAUhnEfs5JWbtne5d16dpVJ+wPSVfYT5OPQigsBJt0hUCbAk61BR9+DwvIXZqGqnrZZBLbhZ1V2WRtHjPKM3BeDynZZ8Vib8mwZgJnAzJ461dA5u6Blw3c0bbMCI42nu33vfIwpKcHXbOe9Pd3TsLyreIUxWFL9RIlN1Z6yS1wZh6OicjkQYlW2LSR6urQprwHpMQa5yz/fkv0h9whKsj0FFoMaSFbrXpAzohy/cRer7irPcFGG0Xfok7tRKR5d0OKaT53t2o8Hi49Xgwlw0GDE4sk/YfOcooZ6Px6ofkYnPCkwCCk/gY/Rmv+d3CR4hgD80T4=
+  on:
+    tags: true
+    repo: therealtbs/react-adjustable-gauge
