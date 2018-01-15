@@ -1,0 +1,11 @@
+# Created by .ignore support plugin (hsz.mobi)
+src/
+example/
+.travis.yml
+webpack.config.js
+.babelrc
+.eslintignore
+.gitignore
+package-lock.json
+stats.json
+.idea/
