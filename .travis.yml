@@ -5,11 +5,19 @@ before_script:
 - npm run lint
 - npm run build
 deploy:
-  provider: npm
-  email: contact@therealtbs.com
-  skip_cleanup: true
-  api_key:
-    secure: M8vEvgK7QDeb0vkKNqOJeOupiyYE6qLw95WnLu5+meZfp7q1OEjaIVHE5O6AaVuZfeM8qJ22HdPNYZBIcUXJA3PLo+Ns9iU1EmW8qRrt8ItPagei84LCzA30KCvJr9gnfbdhqcqKmu7GvqGGc4MsPlTMpNw+gMHoq53mSNmawE9w287uwmeYLBVuPjrRL89Sq4ZfpjxiR/k4CJl+QUBk7bnb0p56eArgJn1IFnfFFNuPbMRHplN6IFxzsjAsbA6E0dCjL/bY5fLlHiWX+WiBANroud0AUALIVGJWwyfH8ZitL8DZniPqhQwBmNwSLaquaH4kBIs6QtZV1Rmk7rDmmqfz9CpelnpRdiYpPseRE8x2uaiiJxhaehRVhzRr+LJTPHp6E6cIbBTP49lDsO4jPopdUCs1ro/2kNDYcSgbmX+f9rn09KPyosj5cNv7sesagqlObGMCIJxFHp2C8BjKEbqc49jylZdn+4oOu1dZYJaILWhOKZOEZ9H7cZVZdQRD8eV/0saZ7Rua8S9dsRohyY6bw0UkX1aUkVA9ghzp3OHcybEci41gsiPrOO93oA8/NuRFsXooKkJhfoYxWB5pqmm3d65540fh26BC9fILm3jReqkZgSb87zt+tnnEyFyxl5oxhp/djiZ4H80f9vb7f19y3QFFOisi7wg+IVljbvE=
-  on:
-    tags: true
-    repo: therealtbs/react-adjustable-gauge
+  - provider: npm
+    email: contact@therealtbs.com
+    skip_cleanup: true
+    api_key:
+      secure: M8vEvgK7QDeb0vkKNqOJeOupiyYE6qLw95WnLu5+meZfp7q1OEjaIVHE5O6AaVuZfeM8qJ22HdPNYZBIcUXJA3PLo+Ns9iU1EmW8qRrt8ItPagei84LCzA30KCvJr9gnfbdhqcqKmu7GvqGGc4MsPlTMpNw+gMHoq53mSNmawE9w287uwmeYLBVuPjrRL89Sq4ZfpjxiR/k4CJl+QUBk7bnb0p56eArgJn1IFnfFFNuPbMRHplN6IFxzsjAsbA6E0dCjL/bY5fLlHiWX+WiBANroud0AUALIVGJWwyfH8ZitL8DZniPqhQwBmNwSLaquaH4kBIs6QtZV1Rmk7rDmmqfz9CpelnpRdiYpPseRE8x2uaiiJxhaehRVhzRr+LJTPHp6E6cIbBTP49lDsO4jPopdUCs1ro/2kNDYcSgbmX+f9rn09KPyosj5cNv7sesagqlObGMCIJxFHp2C8BjKEbqc49jylZdn+4oOu1dZYJaILWhOKZOEZ9H7cZVZdQRD8eV/0saZ7Rua8S9dsRohyY6bw0UkX1aUkVA9ghzp3OHcybEci41gsiPrOO93oA8/NuRFsXooKkJhfoYxWB5pqmm3d65540fh26BC9fILm3jReqkZgSb87zt+tnnEyFyxl5oxhp/djiZ4H80f9vb7f19y3QFFOisi7wg+IVljbvE=
+    on:
+      tags: true
+      repo: therealtbs/react-adjustable-gauge
+  - provider: pages
+    skip-cleanup: true
+    local-dir: example/dist
+    on:
+      tags: true
+      repo: therealtbs/react-adjustable-gauge
+    github-token:
+      secure: MjdEcAv/uhtk5V95sK2ePcxIQMmR7q+zNUoE49s+PumDBNVzKMHxjCfOrkcqls++08fnNJxLl7mA5Hr8XPktQaBpV9Blgr2S4Iqy8yM0tin7ltX+GOQScCzJjkdVk06LCWlEZjkj1eGd2a4YKf2I/lJxA/yeCt64icyc9YQdHkv4e8R+wkJdIwSHHw9PI6MC8K1XkzNFs/HR2IUIdsZaTQ1KGonnlaaoQ4X3nk99Lv0wvQP46+8tfT5fNAKq/ZxYVH4QceAB3YEceS0ClkrvJbewPWaQoQqdQ18Kw6ZZIldb989pmQd0oYXdYZ8nNpgTAKlvLoG19+3RQi1AVzJVRPjznesppeLUUQGZG6oypTUJl55Z/0870IZl85ud7pjwbFFU2GeG5qaMZqbAz+7rUemNgsgb2gXVhESBUpirZA6ugu3171YeFc4yYwqPcL8KWYky05FTZRVpE3V4wWJ8SFhDKCI3ls7dbSK+feAFk0gSd6GsOA09CJR9rTZzR2NQQdOLgBmUdGWuwyJ16+Y0KDaVYLNokYo/yJX2SDaosrTu0ibQevMulKCZun7150A4/lfLjxUPFU7qH+d+ez6qdd5Zq3mGhAwp6PvZ0PDFAUy3n5rCQA8quJGoxj5z4EavvfQ43dB1idVdbSji25wj60he4Ub1MY1CKJin1czhMiw=
