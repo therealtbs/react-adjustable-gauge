@@ -32,8 +32,8 @@ export default class Gauge extends Component {
     );
     this.state = {
       clicked: false,
+      center: { x: props.width / 2, y: props.height - props.offsetBottom },
     };
-    this.center = { x: props.width / 2, y: props.height - props.offsetBottom };
     this.down = this.down.bind(this);
     this.move = this.move.bind(this);
     this.up = this.up.bind(this);
@@ -46,6 +46,19 @@ export default class Gauge extends Component {
     document.addEventListener('touchmove', this.move);
     this.controlAdj();
   }
+
+  componentWillReceiveProps(nextProps) {
+    if (
+      nextProps.width !== this.props.width ||
+      nextProps.height !== this.props.height ||
+      nextProps.offsetBottom !== this.props.offsetBottom
+    ) {
+      this.setState({
+        center: { x: nextProps.width / 2, y: nextProps.height - nextProps.offsetBottom },
+      });
+    }
+  }
+
   componentDidUpdate() {
     this.controlAdj();
   }
@@ -88,7 +101,7 @@ export default class Gauge extends Component {
     return React.cloneElement(e, {
       valUtils: this.valUtils,
       gaugeRadius: this.props.radius,
-      center: this.center,
+      center: this.state.center,
       width: e.props.width || this.props.gaugeWidth,
     });
   }
