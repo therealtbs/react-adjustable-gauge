@@ -41,6 +41,18 @@ module.exports = [
         amd: 'PropTypes',
         root: 'PropTypes',
       },
+      'react-konva': {
+        commonjs: 'react-konva',
+        commonjs2: 'react-konva',
+        amd: 'ReactKonva',
+        root: 'ReactKonva',
+      },
+      konva: {
+        commonjs: 'konva',
+        commonjs2: 'konva',
+        amd: 'Konva',
+        root: 'Konva',
+      },
     },
     ...commonConfig,
   },
