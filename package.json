@@ -1,6 +1,6 @@
 {
   "name": "react-adjustable-gauge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An adjustable radial gauge component with configurable range and number of gauges",
   "main": "dist/react-adjustable-gauge.js",
   "jsnext:main": "dist/index.js",
@@ -15,7 +15,10 @@
     "build:dev": "webpack",
     "clean:build": "rimraf dist && rimraf example/dist"
   },
-  "files": ["dist/"],
+  "repository": "github:therealtbs/react-adjustable-gauge",
+  "files": [
+    "dist/"
+  ],
   "author": "Tobias Westfeld <tobias.westfeld@eshaker.de>",
   "license": "MIT",
   "dependencies": {
