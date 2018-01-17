@@ -1,12 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Group, Text } from 'react-konva';
+import measureText from 'text-width';
 import { MathUtils } from '../helpers';
 import { Mark } from '.';
 
 export default function LabeledMark(props) {
   const offsetFrom90 = props.angle - 270;
-  const width = 50;
+  const width = measureText(props.text, {
+    family: 'Arial',
+    style: props.fontStyle,
+    size: props.fontSize,
+  }) * 1.1;
   return (
     <Group
       rotation={-props.angle}
