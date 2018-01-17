@@ -1,6 +1,6 @@
 {
   "name": "react-adjustable-gauge",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An adjustable radial gauge component with configurable range and number of gauges",
   "main": "dist/react-adjustable-gauge.js",
   "jsnext:main": "dist/index.js",
@@ -26,7 +26,8 @@
     "konva": "^1.7.6",
     "lodash": "^4.17.4",
     "react-konva": "^1.6.5",
-    "react-move": "^2.0.0"
+    "react-move": "^2.0.0",
+    "text-width": "^1.2.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
