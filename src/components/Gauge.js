@@ -30,6 +30,7 @@ export default class Gauge extends Component {
       props.lowerBound,
       props.upperBound
     );
+    this.adjustableGauges = [];
     this.state = {
       clicked: false,
       center: { x: props.width / 2, y: props.height - props.offsetBottom },

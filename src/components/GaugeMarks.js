@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { childrenOfType } from '../helpers/PTValidators';
 import { LabeledMark, Mark } from '.';
-import { mapKeys } from 'lodash';
+import mapKeys from 'lodash/mapKeys';
 import { Group } from 'react-konva';
 
 export default function GaugeMarks(props) {
