@@ -1,6 +1,6 @@
 {
   "name": "react-adjustable-gauge",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An adjustable radial gauge component with configurable range and number of gauges",
   "main": "dist/react-adjustable-gauge.js",
   "jsnext:main": "dist/index.js",
