@@ -121,7 +121,7 @@ export default class Gauge extends Component {
         width={this.props.width}
         height={this.props.height}
         oncontentmousedown={this.down}
-        oncontenttouchdown={this.down}
+        oncontenttouchstart={this.down}
         ref={(e) => {
           this.stage = e;
         }}
