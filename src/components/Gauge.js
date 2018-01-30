@@ -30,6 +30,7 @@ export default class Gauge extends Component {
       props.lowerBound,
       props.upperBound
     );
+    this.adjustableGauges = [];
     this.state = {
       clicked: false,
       center: { x: props.width / 2, y: props.height - props.offsetBottom },
@@ -93,6 +94,7 @@ export default class Gauge extends Component {
     this.adjustableGauges.forEach((f) => f(this.valUtils.deg2val(theta)));
   }
   up() {
+    if (!this.state.clicked) return;
     this.setState({
       clicked: false,
     });

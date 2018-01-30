@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ValueArc } from '.';
-import { Animate } from 'react-move';
+import Animate from 'react-move/Animate';
 import { Group } from 'react-konva';
-import { easeCircle } from 'd3-ease';
+import { circleInOut } from 'd3-ease/src/circle';
 
 export default function AnimatedGauge(props) {
   return (
@@ -17,7 +17,7 @@ export default function AnimatedGauge(props) {
           value: [props.value],
           timing: {
             duration: props.duration,
-            ease: easeCircle,
+            ease: circleInOut,
           },
         },
       ]}
