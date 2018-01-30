@@ -94,6 +94,7 @@ export default class Gauge extends Component {
     this.adjustableGauges.forEach((f) => f(this.valUtils.deg2val(theta)));
   }
   up() {
+    if (!this.state.clicked) return;
     this.setState({
       clicked: false,
     });
